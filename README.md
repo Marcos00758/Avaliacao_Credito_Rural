@@ -14,3 +14,7 @@ A coluna `quantidade_contratos` preserva contagens disponiveis. Os caches munici
 ### Faixas de area plantada
 
 A funcao `categorizar_faixas_hectares(tabela, amplitude=0.25)` recebe a base validada e forma intervalos com limite superior 25% maior que o inferior, iniciando na menor area de cada cultura e ano. Adiciona rotulo, ordem e limites numericos da faixa, preservando as colunas existentes. O notebook salva `dados/tabela_categorizada.csv` e disponibiliza `resumo_faixas` com o numero de municipios por grupo. Faixas de culturas ou anos diferentes devem ser comparadas pelos limites em hectares, e nao apenas pelo numero do grupo.
+
+### Estatisticas por faixa
+
+`resumir_estatisticas_faixas()` em `Integrar_APIs.ipynb` gera `tabela_estatistica` e `dados/tabela_estatistica_faixas.csv`, por cultura, ano e faixa: numero de municipios, mediana da area e mediana, quartis e intervalo interquartil do credito e do credito por hectare. Os indicadores por hectare sao calculados por municipio antes do resumo. Se houver contagens municipais validas, inclui estatisticas de contratos, contratos por mil hectares e a mediana do valor medio municipal por contrato, com contagens da cobertura. Grupos de um municipio sao mantidos e precisam de cautela na interpretacao. Nenhuma estatistica de contratos e produzida a partir de contagem de linhas.
