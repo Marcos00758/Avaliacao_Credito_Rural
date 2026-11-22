@@ -18,3 +18,11 @@ A funcao `categorizar_faixas_hectares(tabela, amplitude=0.25)` recebe a base val
 ### Estatisticas por faixa
 
 `resumir_estatisticas_faixas()` em `Integrar_APIs.ipynb` gera `tabela_estatistica` e `dados/tabela_estatistica_faixas.csv`, por cultura, ano e faixa: numero de municipios, mediana da area e mediana, quartis e intervalo interquartil do credito e do credito por hectare. Os indicadores por hectare sao calculados por municipio antes do resumo. Se houver contagens municipais validas, inclui estatisticas de contratos, contratos por mil hectares e a mediana do valor medio municipal por contrato, com contagens da cobertura. Grupos de um municipio sao mantidos e precisam de cautela na interpretacao. Nenhuma estatistica de contratos e produzida a partir de contagem de linhas.
+
+### Dispersao de credito e area
+
+A secao de dispersao de `Integrar_APIs.ipynb` usa `tabela_categorizada` e oferece filtros de cultura, ano e UF, zoom e detalhes por municipio. Compara area plantada (ha) e credito nominal (R$), com cores por regiao. O grafico e exibido diretamente no notebook, sem criar pasta nem exportar arquivos. Quantidade de contratos nao faz parte deste grafico.
+
+### Questao 5 - Comparacao estadual
+
+`calcular_indicadores_estaduais(tabela_validada)` calcula R$/t e R$/ha pela razao entre somas de credito e denominador dos mesmos municipios de cada UF, cultura e ano. Producao invalida ou nao positiva e excluida do calculo por tonelada, com contagem informada. `criar_graficos_estaduais_questao5()` exibe dois paineis de barras com filtros compartilhados de cultura e ano e referencia nacional da mesma cobertura. Os valores representam os municipios cobertos, nao necessariamente a totalidade estadual. Graficos e tabela ficam no notebook, sem exportar arquivos.
