@@ -46,3 +46,6 @@ Os gráficos 2, 3, 6 e 7 atualizam uma única imagem PNG em memória dentro dos 
 ### Notebook de apresentação
 
 Abra `Gráficos.ipynb` e execute as células em ordem: a primeira carrega `Integrar_APIs.ipynb` com `%run -i`, e as seguintes chamam `exibir_grafico_1()` até `exibir_grafico_7()`. Os textos e chamadas ficam no notebook de apresentação; os cálculos, funções e preparação dos dados continuam na integração. `Integrar_APIs.ipynb` não chama mais os gráficos automaticamente. Para exibir um gráfico nele, chame a função `exibir_grafico_N()` correspondente. O carregamento mantém o comportamento existente de leitura, preparação e gravação de tabelas e uso das APIs/cache; não exporta imagens.
+### Cana-de-açúcar nos seletores
+
+A preparação compartilhada em `Integrar_APIs.ipynb` converte o produto `"CANA-DE-AÇUCAR"` do cache do BCB para `Cana-de-açúcar`, o nome usado pelo IBGE. Essa correspondência permite incluir a cultura nos cruzamentos e seletores dos gráficos 2, 3, 6 e 7, respeitando os filtros existentes. Após atualizar, reexecute a célula de carregamento de `Gráficos.ipynb` e as células desses gráficos para reconstruir os dados e widgets.
