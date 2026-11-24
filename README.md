@@ -56,7 +56,7 @@ Todos os imports de `Integrar_APIs.ipynb` ficam na primeira célula de código. 
 
 ### Paleta dos gráficos
 
-Os sete gráficos usam a paleta centralizada em `Integrar_APIs.ipynb`: azul `#2866A6`, verde `#3A851D` e verde azulado `#176B65`. Crédito e indicadores agrícolas usam azul e verde, respectivamente, quando comparados. Culturas e regiões têm cores fixas dessa família; os quartis usam tons claros a escuros. No gráfico 7, valores atípicos nos dois indicadores ficam em verde azulado. Cinzas distinguem referências, contornos, municípios típicos e ausência de dados. Recarregue a integração e reexecute os gráficos para aplicar a paleta.
+A paleta fica centralizada em `Integrar_APIs.ipynb`, com azul `#2866A6` e verde `#3A851D` como cores principais. O vermelho `#B64040` identifica soja nas séries por cultura, a categoria “Ambos” no gráfico 7 e a linha de referência nacional no gráfico 5. O gráfico 4 usa um degradê de azul escuro a claro na ordem Norte, Nordeste, Centro-Oeste, Sudeste e Sul, também aplicada à legenda. Os quartis mantêm gradações de azul e verde; os cinzas distinguem contornos, municípios típicos e ausência de dados. Recarregue a integração e reexecute os gráficos para aplicar a paleta.
 
 ### Revisão da cana-de-açúcar
 
