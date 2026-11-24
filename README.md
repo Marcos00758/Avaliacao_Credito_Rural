@@ -26,3 +26,7 @@ A secao de dispersao de `Integrar_APIs.ipynb` usa `tabela_categorizada` e oferec
 ### Questao 5 - Comparacao estadual
 
 `calcular_indicadores_estaduais(tabela_validada)` calcula R$/t e R$/ha pela razao entre somas de credito e denominador dos mesmos municipios de cada UF, cultura e ano. Producao invalida ou nao positiva e excluida do calculo por tonelada, com contagem informada. `criar_graficos_estaduais_questao5()` exibe dois paineis de barras com filtros compartilhados de cultura e ano e referencia nacional da mesma cobertura. Os valores representam os municipios cobertos, nao necessariamente a totalidade estadual. Graficos e tabela ficam no notebook, sem exportar arquivos.
+
+### Exibicao dos graficos no VS Code
+
+Os graficos 4 e 5 usam seletores `Dropdown` e `interactive_output` com o mesmo padrao do grafico 2. O grafico 4 permite escolher cultura, ano e UF; o grafico 5, cultura e ano. A selecao inicial e soja no ano mais recente. Os filtros sao aplicados em Python e os graficos Altair usam a mesma saida HTML padrao do grafico 1. Reexecute a celula de imports e as celulas dos graficos com as tabelas disponiveis. As figuras e os dados nao sao exportados por essas celulas.
