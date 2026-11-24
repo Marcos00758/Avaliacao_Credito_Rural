@@ -49,3 +49,7 @@ Abra `Gráficos.ipynb` e execute as células em ordem: a primeira carrega `Integ
 ### Cana-de-açúcar nos seletores
 
 A preparação compartilhada em `Integrar_APIs.ipynb` converte o produto `"CANA-DE-AÇUCAR"` do cache do BCB para `Cana-de-açúcar`, o nome usado pelo IBGE. Essa correspondência permite incluir a cultura nos cruzamentos e seletores dos gráficos 2, 3, 6 e 7, respeitando os filtros existentes. Após atualizar, reexecute a célula de carregamento de `Gráficos.ipynb` e as células desses gráficos para reconstruir os dados e widgets.
+
+### Organização do código da integração
+
+Todos os imports de `Integrar_APIs.ipynb` ficam na primeira célula de código. Antes dos gráficos, uma célula centraliza regiões, chaves de agrupamento, cores reutilizadas e limites dos mapas. Após as malhas, outra célula prepara a base e as opções compartilhadas pelos gráficos 6 e 7. Seletores de bases com coberturas diferentes mantêm suas próprias opções. As estatísticas usam `primeiro_quartil()` e `terceiro_quartil()` em lugar de funções anônimas. Execute o notebook em ordem, ou recarregue a integração em `Gráficos.ipynb`, antes de chamar os gráficos.
