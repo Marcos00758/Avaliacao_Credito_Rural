@@ -29,7 +29,7 @@ A secao de dispersao de `Integrar_APIs.ipynb` usa `tabela_categorizada` e oferec
 
 ### Exibicao dos graficos no VS Code
 
-Os graficos 4 e 5 usam seletores `Dropdown` e `interactive_output` com o mesmo padrao do grafico 2. O grafico 4 permite escolher cultura, ano e UF; o grafico 5, cultura e ano. A selecao inicial e soja no ano mais recente. Os filtros sao aplicados em Python e os graficos Altair usam a mesma saida HTML padrao do grafico 1. Reexecute a celula de imports e as celulas dos graficos com as tabelas disponiveis. As figuras e os dados nao sao exportados por essas celulas.
+Os graficos 4 e 5 usam seletores `Dropdown` e uma saida `Output` unica. O conteiner e exibido antes de desenhar a selecao inicial; os filtros atualizam essa mesma saida. O grafico 4 permite escolher cultura, ano e UF; o grafico 5, cultura e ano. A selecao inicial e soja no ano mais recente. Os filtros sao aplicados em Python e os graficos Altair usam a mesma saida HTML padrao do grafico 1. Reexecute a celula de imports e as celulas dos graficos com as tabelas disponiveis. As figuras e os dados nao sao exportados por essas celulas.
 
 ### Organização dos gráficos
 
@@ -56,7 +56,7 @@ Todos os imports de `Integrar_APIs.ipynb` ficam na primeira célula de código. 
 
 ### Paleta dos gráficos
 
-A paleta fica centralizada em `Integrar_APIs.ipynb`, com azul `#2866A6` e verde `#3A851D` como cores principais. O vermelho `#B64040` identifica soja nas séries por cultura, a categoria “Ambos” no gráfico 7 e a linha de referência nacional no gráfico 5. O gráfico 4 usa um degradê de azul escuro a claro na ordem Norte, Nordeste, Centro-Oeste, Sudeste e Sul, também aplicada à legenda. Os quartis mantêm gradações de azul e verde; os cinzas distinguem contornos, municípios típicos e ausência de dados. Recarregue a integração e reexecute os gráficos para aplicar a paleta.
+A paleta fica centralizada em `Integrar_APIs.ipynb`, com azul `#2866A6` e verde `#3A851D` como cores principais. O vermelho `#B64040` identifica milho nas séries por cultura, a categoria “Ambos” no gráfico 7 e a linha de referência nacional no gráfico 5. O gráfico 4 usa um degradê de azul escuro a claro na ordem Norte, Nordeste, Centro-Oeste, Sudeste e Sul, também aplicada à legenda. Os quartis mantêm gradações de azul e verde; os cinzas distinguem contornos, municípios típicos e ausência de dados. Recarregue a integração e reexecute os gráficos para aplicar a paleta.
 
 ### Revisão da cana-de-açúcar
 
@@ -65,3 +65,5 @@ A leitura dos caches do BCB remove linhas agregadas exatamente repetidas por con
 O gráfico 1 reconstrói as duas séries dentro de `exibir_grafico_1()`, usando os dados atuais de `sicor`, em vez de reutilizar objetos Altair preparados anteriormente. Depois de atualizar a padronização da cana, recarregue os dados pela primeira célula de `Gráficos.ipynb` e execute novamente a chamada do gráfico; saídas antigas salvas não são atualizadas automaticamente.
 
 Os gráficos Altair (1, 4 e 5) desativam o menu de três pontinhos com `embed_options={"actions": False}`, inclusive nas atualizações dos widgets. Os filtros e a interação permanecem disponíveis; reexecute as células após recarregar a integração para atualizar a exibição.
+
+Se o sistema impedir a gravação de `dados/tabela_categorizada.csv`, a célula informa a falha e continua usando `tabela_categorizada` em memória nos gráficos; o arquivo em disco não deve ser considerado atualizado nessa situação.
