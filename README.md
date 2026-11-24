@@ -57,3 +57,11 @@ Todos os imports de `Integrar_APIs.ipynb` ficam na primeira célula de código. 
 ### Paleta dos gráficos
 
 Os sete gráficos usam a paleta centralizada em `Integrar_APIs.ipynb`: azul `#2866A6`, verde `#3A851D` e verde azulado `#176B65`. Crédito e indicadores agrícolas usam azul e verde, respectivamente, quando comparados. Culturas e regiões têm cores fixas dessa família; os quartis usam tons claros a escuros. No gráfico 7, valores atípicos nos dois indicadores ficam em verde azulado. Cinzas distinguem referências, contornos, municípios típicos e ausência de dados. Recarregue a integração e reexecute os gráficos para aplicar a paleta.
+
+### Revisão da cana-de-açúcar
+
+A leitura dos caches do BCB remove linhas agregadas exatamente repetidas por consultas sobrepostas, sem modificar os arquivos originais. Isso evita duplicar valores nos gráficos 1, 2, 3, 6 e 7 e alinha os totais com as tabelas locais usadas pelos gráficos 4 e 5. A preparação municipal do IBGE separa nome e UF pela última ocorrência de ` - `, preservando nomes com hífen e o agrupamento estadual dos mapas. A cana usa o rótulo `Cana-de-açúcar` nos dados das APIs e `cana_de_acucar` nas tabelas locais; as duas convenções permanecem em suas respectivas bases. O gráfico 1 ainda conta registros em sua segunda série, pois o cache municipal não fornece quantidade de contratos.
+
+O gráfico 1 reconstrói as duas séries dentro de `exibir_grafico_1()`, usando os dados atuais de `sicor`, em vez de reutilizar objetos Altair preparados anteriormente. Depois de atualizar a padronização da cana, recarregue os dados pela primeira célula de `Gráficos.ipynb` e execute novamente a chamada do gráfico; saídas antigas salvas não são atualizadas automaticamente.
+
+Os gráficos Altair (1, 4 e 5) desativam o menu de três pontinhos com `embed_options={"actions": False}`, inclusive nas atualizações dos widgets. Os filtros e a interação permanecem disponíveis; reexecute as células após recarregar a integração para atualizar a exibição.
