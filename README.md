@@ -53,3 +53,7 @@ A preparação compartilhada em `Integrar_APIs.ipynb` converte o produto `"CANA-
 ### Organização do código da integração
 
 Todos os imports de `Integrar_APIs.ipynb` ficam na primeira célula de código. Antes dos gráficos, uma célula centraliza regiões, chaves de agrupamento, cores reutilizadas e limites dos mapas. Após as malhas, outra célula prepara a base e as opções compartilhadas pelos gráficos 6 e 7. Seletores de bases com coberturas diferentes mantêm suas próprias opções. As estatísticas usam `primeiro_quartil()` e `terceiro_quartil()` em lugar de funções anônimas. Execute o notebook em ordem, ou recarregue a integração em `Gráficos.ipynb`, antes de chamar os gráficos.
+
+### Paleta dos gráficos
+
+Os sete gráficos usam a paleta centralizada em `Integrar_APIs.ipynb`: azul `#2866A6`, verde `#3A851D` e verde azulado `#176B65`. Crédito e indicadores agrícolas usam azul e verde, respectivamente, quando comparados. Culturas e regiões têm cores fixas dessa família; os quartis usam tons claros a escuros. No gráfico 7, valores atípicos nos dois indicadores ficam em verde azulado. Cinzas distinguem referências, contornos, municípios típicos e ausência de dados. Recarregue a integração e reexecute os gráficos para aplicar a paleta.
