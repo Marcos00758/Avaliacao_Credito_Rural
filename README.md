@@ -38,3 +38,7 @@ O notebook apresenta os gráficos existentes na ordem das perguntas 1, 2, 3, 4 e
 ### Mapas e produtividade — gráficos 6 e 7
 
 Os mapas usam GeoPandas e NumPy, sem geobr nem DuckDB. A seção de geografia obtém GeoJSON simplificado da API de malhas do IBGE com período fixo em 2020 e guarda as malhas e a proveniência em `dados/ibge/malhas/municipio_2020.json` e `uf_2020.json`; após a primeira obtenção, o cache permite leitura sem rede. O código conserva os filtros de 50 ha e valores positivos, os quartis e os critérios estaduais de valores atípicos. Os gráficos permanecem no notebook, com seletores de cultura, ano e recorte; não são exportados. Para executar, rode a preparação geográfica antes dos gráficos 6 e 7. Registros sem polígono na malha de 2020 são informados e mantidos nas estatísticas, sem representação no mapa. Os gráficos 1 a 5 foram preservados.
+
+Os seletores e a saída de cada gráfico com widgets são exibidos juntos em um único contêiner `VBox`, evitando múltiplas visualizações separadas dos controles na célula. Após atualizar o notebook, limpe as saídas antigas e reexecute as células.
+
+Os gráficos 2, 3, 6 e 7 atualizam uma única imagem PNG em memória dentro dos widgets, substituindo o conteúdo a cada seleção sem acumular figuras ou exportar arquivos. O gráfico 7 apresenta somente o mapa, sem a tabela de casos atípicos.
