@@ -42,3 +42,7 @@ Os mapas usam GeoPandas e NumPy, sem geobr nem DuckDB. A seção de geografia ob
 Os seletores e a saída de cada gráfico com widgets são exibidos juntos em um único contêiner `VBox`, evitando múltiplas visualizações separadas dos controles na célula. Após atualizar o notebook, limpe as saídas antigas e reexecute as células.
 
 Os gráficos 2, 3, 6 e 7 atualizam uma única imagem PNG em memória dentro dos widgets, substituindo o conteúdo a cada seleção sem acumular figuras ou exportar arquivos. O gráfico 7 apresenta somente o mapa, sem a tabela de casos atípicos.
+
+### Notebook de apresentação
+
+Abra `Gráficos.ipynb` e execute as células em ordem: a primeira carrega `Integrar_APIs.ipynb` com `%run -i`, e as seguintes chamam `exibir_grafico_1()` até `exibir_grafico_7()`. Os textos e chamadas ficam no notebook de apresentação; os cálculos, funções e preparação dos dados continuam na integração. `Integrar_APIs.ipynb` não chama mais os gráficos automaticamente. Para exibir um gráfico nele, chame a função `exibir_grafico_N()` correspondente. O carregamento mantém o comportamento existente de leitura, preparação e gravação de tabelas e uso das APIs/cache; não exporta imagens.
