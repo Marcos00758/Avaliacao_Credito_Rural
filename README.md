@@ -34,3 +34,7 @@ Os graficos 4 e 5 usam seletores `Dropdown` e `interactive_output` com o mesmo p
 ### Organização dos gráficos
 
 O notebook apresenta os gráficos existentes na ordem das perguntas 1, 2, 3, 4 e 5; não há seções vazias para 6 e 7. Cada seção tem um parágrafo com a pergunta e a interpretação. O código dos gráficos 1 a 3 foi preservado; somente o dos gráficos 4 e 5 foi simplificado, mantendo os seletores, os indicadores, os detalhes e o renderer padrão do Altair, sem exportar gráficos.
+
+### Mapas e produtividade — gráficos 6 e 7
+
+Os mapas usam GeoPandas e NumPy, sem geobr nem DuckDB. A seção de geografia obtém GeoJSON simplificado da API de malhas do IBGE com período fixo em 2020 e guarda as malhas e a proveniência em `dados/ibge/malhas/municipio_2020.json` e `uf_2020.json`; após a primeira obtenção, o cache permite leitura sem rede. O código conserva os filtros de 50 ha e valores positivos, os quartis e os critérios estaduais de valores atípicos. Os gráficos permanecem no notebook, com seletores de cultura, ano e recorte; não são exportados. Para executar, rode a preparação geográfica antes dos gráficos 6 e 7. Registros sem polígono na malha de 2020 são informados e mantidos nas estatísticas, sem representação no mapa. Os gráficos 1 a 5 foram preservados.
