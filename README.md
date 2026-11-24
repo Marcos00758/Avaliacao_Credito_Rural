@@ -30,3 +30,7 @@ A secao de dispersao de `Integrar_APIs.ipynb` usa `tabela_categorizada` e oferec
 ### Exibicao dos graficos no VS Code
 
 Os graficos 4 e 5 usam seletores `Dropdown` e `interactive_output` com o mesmo padrao do grafico 2. O grafico 4 permite escolher cultura, ano e UF; o grafico 5, cultura e ano. A selecao inicial e soja no ano mais recente. Os filtros sao aplicados em Python e os graficos Altair usam a mesma saida HTML padrao do grafico 1. Reexecute a celula de imports e as celulas dos graficos com as tabelas disponiveis. As figuras e os dados nao sao exportados por essas celulas.
+
+### Organização dos gráficos
+
+O notebook apresenta os gráficos existentes na ordem das perguntas 1, 2, 3, 4 e 5; não há seções vazias para 6 e 7. Cada seção tem um parágrafo com a pergunta e a interpretação. O código dos gráficos 1 a 3 foi preservado; somente o dos gráficos 4 e 5 foi simplificado, mantendo os seletores, os indicadores, os detalhes e o renderer padrão do Altair, sem exportar gráficos.
